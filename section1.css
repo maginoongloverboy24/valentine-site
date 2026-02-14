@@ -1,0 +1,181 @@
+/* ================= RESET ================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* ================= PAGE ================= */
+body{
+font-family:'Poppins',sans-serif;
+min-height:100vh;
+
+/* CUTESY YELLOW THEME */
+background:linear-gradient(135deg,#fff9d6,#ffe89c,#fff3b0);
+
+display:flex;
+justify-content:center;
+align-items:flex-start;
+
+padding:120px 20px 60px;
+overflow-x:hidden;
+position:relative;
+}
+
+/* ================= HEART SKY ================= */
+
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+pointer-events:none;
+}
+
+.hearts span{
+position:absolute;
+opacity:0.7;
+}
+
+@keyframes floatHearts{
+0%{transform:translateY(0);opacity:.7;}
+100%{transform:translateY(-120vh);opacity:0;}
+}
+
+/* ================= CONTAINER ================= */
+
+.section-container{
+position:relative;
+z-index:10;
+
+width:90%;
+max-width:700px;
+
+padding:40px 45px;
+
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(12px);
+
+border-radius:30px;
+box-shadow:0 20px 40px rgba(255,200,80,0.25);
+
+text-align:center;
+}
+
+/* ================= IMAGE ================= */
+
+.section-image{
+width:280px;
+max-width:95%;
+
+border-radius:40px;
+border:6px solid #ffe89c;
+padding:8px;
+
+background:white;
+box-shadow:0 15px 30px rgba(0,0,0,0.15);
+
+margin-bottom:25px;
+}
+
+/* ================= MESSAGE ================= */
+
+.message{
+font-family:'Playfair Display',serif;
+font-size:19px;
+line-height:1.9;
+color:#7a6400; /* warm brown text */
+text-align:center;
+}
+
+.message p{
+margin-bottom:16px;
+}
+
+/* ================= BACK BUTTON ================= */
+
+.back-btn{
+position:fixed;
+top:25px;
+left:25px;
+
+padding:12px 22px;
+border:none;
+border-radius:25px;
+
+background:#ffd166; /* yellow button */
+color:white;
+
+font-size:16px;
+cursor:pointer;
+
+box-shadow:0 8px 20px rgba(255,200,80,0.35);
+z-index:9999;
+}
+
+.bear{
+position:fixed;
+z-index:9998;
+pointer-events:none;
+animation:floatBear 4s ease-in-out infinite;
+}
+
+@keyframes floatBear{
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
+}
+
+.b1{top:150px;left:2%;width:110px;}
+.b5{top:55%;left:3%;width:120px;}
+.b9{bottom:10%;left:6%;width:120px;}
+
+.b2{top:22%;right:2%;width:130px;}
+.b6{top:65%;right:4%;width:125px;}
+.b4{bottom:18%;right:10%;width:140px;}
+
+.b3{top:8%;left:35%;width:110px;}
+.b7{top:35%;right:28%;width:110px;}
+.b8{bottom:5%;right:35%;width:130px;}
+.b10{top:40%;left:45%;width:115px;}
+
+@media(max-width:600px){
+
+body{
+padding-top:100px;
+}
+
+.section-container{
+padding:30px 25px;
+}
+
+.section-image{
+width:230px;
+}
+
+.message{
+font-size:17px;
+}
+
+/* reduce bears on small screens */
+.b7,.b8,.b9,.b10{
+display:none;
+}
+
+.bear{
+width:90px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+

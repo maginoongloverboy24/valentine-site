@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 3 💜</title>
+
+<link rel="stylesheet" href="section3.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<button class="back-btn" onclick="location.replace('yes.html')">
+← back
+</button>
+
+<!-- HEART SKY -->
+<div class="hearts" id="hearts"></div>
+
+<!-- BEARS -->
+<img src="images/bear-cute.gif" class="bear b1">
+<img src="images/bear-kiss.gif" class="bear b2">
+<img src="images/bear-heart.gif" class="bear b3">
+<img src="images/bear1.gif" class="bear b4">
+<img src="images/bear2.gif" class="bear b5">
+<img src="images/bear3.gif" class="bear b6">
+<img src="images/bear4.gif" class="bear b7">
+<img src="images/bear5.gif" class="bear b8">
+<img src="images/bear6.gif" class="bear b9">
+<img src="images/bear7.gif" class="bear b10">
+
+<!-- MAIN CONTENT -->
+<div class="section-container">
+
+<img src="images/baby.jpg" class="section-image">
+
+<div class="message">
+
+<p>Babyyy 🥺💜</p>
+
+<p>
+No matter what happens, I want you to always remember that you will always have your kyutt babyy boy here beside you.
+Someone who will support you, understand you, and stay with you through everything.
+</p>
+
+<p>
+I’ll always be here to listen to you, comfort you, and make you smile whenever you feel down.
+You never have to face anything alone because I’ll always choose you — every single day.
+</p>
+
+<p>
+I promise to keep loving you, caring for you, protecting your heart, and making you feel special in every way I can.
+Your happiness means everything to me, and seeing you smile is already enough to make my whole day complete.
+</p>
+
+<p>
+You are my safe place, my happiness, my favorite person, and the most beautiful part of my life.
+And no matter where life takes us, my love for you will never change.
+</p>
+
+<p>I love you always and forever 💕✨</p>
+
+</div>
+</div>
+
+<!-- HEART SYSTEM -->
+<script>
+const container=document.getElementById("hearts");
+
+for(let i=0;i<500;i++){createHeart(true);}
+setInterval(()=>createHeart(false),150);
+
+function createHeart(isStatic){
+const heart=document.createElement("span");
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"%";
+heart.style.top=Math.random()*100+"%";
+heart.style.fontSize=(10+Math.random()*16)+"px";
+
+const colors=["#d6caff","#c8b6ff","#e6dbff","#b8b8e6","#f0e6ff"];
+heart.style.color=colors[Math.floor(Math.random()*colors.length)];
+
+if(!isStatic){
+heart.style.animation="floatHearts 15s linear";
+}
+
+container.appendChild(heart);
+
+if(!isStatic){
+setTimeout(()=>heart.remove(),15000);
+}
+}
+</script>
+
+<script src="playlist.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+

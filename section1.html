@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I ❤️</title>
+
+<link rel="stylesheet" href="section1.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<button class="back-btn" onclick="location.replace('yes.html')">
+← back
+</button>
+
+<!-- HEART SKY -->
+<div class="hearts" id="hearts"></div>
+
+<!-- SCATTERED BEARS -->
+<img src="images/bear-cute.gif" class="bear b1">
+<img src="images/bear-kiss.gif" class="bear b2">
+<img src="images/bear-heart.gif" class="bear b3">
+
+<img src="images/bear1.gif" class="bear b4">
+<img src="images/bear2.gif" class="bear b5">
+<img src="images/bear3.gif" class="bear b6">
+<img src="images/bear4.gif" class="bear b7">
+<img src="images/bear5.gif" class="bear b8">
+<img src="images/bear6.gif" class="bear b9">
+<img src="images/bear7.gif" class="bear b10">
+
+<!-- MAIN CONTENT -->
+<div class="section-container">
+
+<img src="images/your-photo.jpg" class="section-image">
+
+<div class="message">
+
+<p>Hi babyyy 🥺💗</p>
+
+<p>
+Thank you for making me so happy everyday. Hindi mo alam how much you mean to me and how much you changed my life for the better. Simula nung dumating ka, everything just feels lighter, warmer, and more meaningful.
+</p>
+
+<p>
+Ikaw yung dahilan bakit napapangiti ako randomly, bakit kahit pagod ako or stressed bigla nalang nagiging okay lahat pag ikaw na iniisip ko. You make my days brighter just by existing, and sobra sobra akong grateful for you.
+</p>
+
+<p>
+Thank you for loving me, understanding me, and being patient with me kahit minsan makulit ako 🧸 Thank you for always making me feel safe, valued, and cared for. I appreciate every little thing you do — your time, effort, love, and presence.
+</p>
+
+<p>
+Sobrang lucky ko to have you in my life and I promise to keep loving you, caring for you, and making you happy as much as you make me happy 💕 You mean the whole world to me. I love you always and forever 💗✨
+</p>
+
+</div>
+</div>
+
+<!-- HEART GENERATOR -->
+<script>
+const container=document.getElementById("hearts");
+
+for(let i=0;i<500;i++){ createHeart(true); }
+setInterval(()=>createHeart(false),150);
+
+function createHeart(isStatic){
+const heart=document.createElement("span");
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"%";
+heart.style.top=Math.random()*100+"%";
+heart.style.fontSize=(8+Math.random()*14)+"px";
+
+const colors=["#ffc0cb","#ffb6c1","#ffd6dc","#ff9aa2","#ffe4e9"];
+heart.style.color=colors[Math.floor(Math.random()*colors.length)];
+
+if(!isStatic){
+heart.style.animation="floatHearts 15s linear";
+}
+
+container.appendChild(heart);
+
+if(!isStatic){
+setTimeout(()=>heart.remove(),15000);
+}
+}
+</script>
+
+<script src="playlist.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,144 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* PAGE */
+body{
+font-family:'Poppins',sans-serif;
+min-height:100vh;
+background:#ffe3ec;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+padding:120px 20px 60px;
+overflow-x:hidden;
+position:relative;
+}
+
+/* HEART SKY */
+.hearts{
+position:fixed;
+inset:0;
+z-index:0;
+pointer-events:none;
+}
+
+.hearts span{
+position:absolute;
+opacity:0.7;
+}
+
+@keyframes floatHearts{
+0%{transform:translateY(0);}
+100%{transform:translateY(-120vh);opacity:0;}
+}
+
+/* CONTAINER */
+.section-container{
+position:relative;
+z-index:10;
+width:90%;
+max-width:700px;
+padding:40px;
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(12px);
+border-radius:30px;
+box-shadow:0 20px 40px rgba(255,105,135,0.25);
+text-align:center;
+}
+
+/* CONNECTED PHOTOS */
+.linked{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+margin-bottom:25px;
+}
+
+/* SAME SIZE IMAGES */
+.circle{
+width:170px;
+height:170px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid #ffd6dc;
+background:white;
+}
+
+/* CONNECTING STRING */
+.string{
+width:140px;
+height:5px;
+background:linear-gradient(90deg,#ff9fb3,#ffd6dc,#ff9fb3);
+border-radius:10px;
+}
+
+/* MESSAGE */
+.message{
+font-family:'Playfair Display',serif;
+font-size:19px;
+line-height:1.9;
+color:#7a3b52;
+}
+
+.message p{
+margin-bottom:16px;
+}
+
+/* SAME BACK BUTTON SIZE AS SECTION 1 */
+.back-btn{
+position:fixed;
+top:20px;
+left:20px;
+border:none;
+padding:12px 20px;
+border-radius:20px;
+background:#ffd6dc;
+font-size:18px;
+cursor:pointer;
+z-index:9999;
+}
+
+/* BEARS */
+.bear{
+position:fixed;
+z-index:9998;
+pointer-events:none;
+animation:floatBear 4s ease-in-out infinite;
+}
+
+@keyframes floatBear{
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
+}
+
+/* POSITIONS */
+.b1{top:150px;left:2%;width:110px;}
+.b5{top:55%;left:3%;width:120px;}
+.b9{bottom:10%;left:6%;width:120px;}
+
+.b2{top:22%;right:2%;width:130px;}
+.b6{top:65%;right:4%;width:125px;}
+.b4{bottom:18%;right:10%;width:140px;}
+
+.b3{top:8%;left:35%;width:110px;}
+.b7{top:35%;right:28%;width:110px;}
+.b8{bottom:5%;right:35%;width:130px;}
+.b10{top:40%;left:45%;width:115px;}
+
+
+
+
+
+
+
+
+
+
+
+
+

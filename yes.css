@@ -1,0 +1,151 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* BODY */
+body{
+background:#ffd6dc;
+font-family:Quicksand, sans-serif;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+/* CONTAINER */
+.container{
+text-align:center;
+width:100%;
+max-width:900px;
+}
+
+/* ======================
+   TITLE
+====================== */
+
+.title{
+font-family:"Great Vibes", cursive;
+font-size:clamp(40px,7vw,70px);
+margin-bottom:20px;
+}
+
+/* ======================
+   KISSING BEARS
+====================== */
+
+.kissing-bears img{
+width:clamp(150px,30vw,260px);
+margin:20px auto;
+display:block;
+}
+
+/* ======================
+   INSTRUCTION
+====================== */
+
+.instruction{
+font-family:"Pacifico", cursive;
+font-size:clamp(18px,4vw,26px);
+margin-bottom:25px;
+}
+
+/* ======================
+   BUTTON GRID
+====================== */
+
+/* phone = column */
+.button-grid{
+display:flex;
+flex-direction:column;
+gap:20px;
+align-items:center;
+margin-bottom:40px;
+}
+
+/* PC = row */
+@media(min-width:768px){
+.button-grid{
+flex-direction:row;
+justify-content:center;
+}
+}
+
+/* ======================
+   SQUARE BUTTONS
+====================== */
+
+.choice{
+border:none;
+border-radius:16px;
+padding:15px;
+width:130px;
+height:130px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+font-family:"Pacifico", cursive;
+font-size:28px;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* hover */
+.choice:hover{
+transform:scale(1.1);
+}
+
+/* button colors */
+.yellow{ background:#ffd166; }
+.pink{ background:#ffe3ec; }
+.purple{ background:#b8b8e6; }
+
+/* ======================
+   BUTTON ICONS (LOWER)
+====================== */
+
+.choice img{
+height:70px;
+width:auto;
+object-fit:contain;
+margin-top:10px; /* pushes icon lower */
+}
+
+/* letter spacing inside button */
+.choice span{
+margin-top:4px;
+}
+
+/* ======================
+   BOUQUET SECTION
+====================== */
+
+.bouquet{
+margin-top:30px;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* curved text — bigger + closer */
+.curve-text{
+width:280px;
+height:110px;
+font-family:"Great Vibes", cursive;
+font-size:42px; /* bigger text */
+fill:#000;
+margin-bottom:-45px; /* pulls bouquet closer */
+}
+
+/* bouquet image */
+.bouquet img{
+width:clamp(240px,48vw,300px);
+}
+
+
+

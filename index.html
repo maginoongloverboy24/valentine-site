@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- cute fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Great+Vibes&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- MAIN PAGE LOOP MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="bg_songs/YLM(mainLooped).mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+  <h1 class="title">
+    Will <span>You</span> be <br>
+    <span class="small">my</span> Valentine?
+  </h1>
+
+  <!-- buttons -->
+  <div class="buttons">
+
+    <button id="yesBtn" class="yes">
+      <img src="images/flower.png" class="flower">
+      Yes!
+    </button>
+
+    <button id="noBtn" class="no">
+      🙄 no :(
+    </button>
+
+  </div>
+
+  <div id="messageArea"></div>
+
+</div>
+
+<img src="images/bear.png" class="bear">
+
+<script src="script.js"></script>
+
+<script>
+/* ===============================
+   STEP 4 — STOP PLAYLIST HERE
+   (when user returns to main page)
+   =============================== */
+localStorage.removeItem("playlistActive");
+localStorage.removeItem("playlistIndex");
+localStorage.removeItem("playlistTime");
+
+
+/* ===============================
+   AUTO PLAY MAIN PAGE MUSIC
+   =============================== */
+
+const music = document.getElementById("bgMusic");
+
+window.addEventListener("load",()=>{
+  music.volume = 1;
+  music.play().catch(()=>{});
+});
+
+/* backup autoplay trigger */
+document.addEventListener("click",()=>{
+  music.play().catch(()=>{});
+},{ once:true });
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

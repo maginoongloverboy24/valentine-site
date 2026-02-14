@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yes ❤️</title>
+
+<!-- stylesheet -->
+<link rel="stylesheet" href="yes.css">
+
+<!-- cute fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Great+Vibes&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- TITLE -->
+<h1 class="title">I knew you would say YES!</h1>
+
+<!-- KISSING BEARS GIF -->
+<div class="kissing-bears">
+  <img src="images/kiss.gif" alt="kissing bears">
+</div>
+
+<!-- INSTRUCTION -->
+<p class="instruction">press each of the button 💌</p>
+
+<!-- I L Y BUTTONS -->
+<div class="button-grid">
+
+<button class="choice yellow" onclick="location.replace('section1.html')">
+  <img src="images/bear-icon.png" alt="bear icon">
+  <span>I</span>
+</button>
+
+<button class="choice pink" onclick="location.replace('section2.html')">
+  <img src="images/heart-icon.png" alt="heart icon">
+  <span>L</span>
+</button>
+
+<button class="choice purple" onclick="location.replace('section3.html')">
+  <img src="images/bouquet-icon.png" alt="bouquet icon">
+  <span>Y</span>
+</button>
+
+</div>
+
+<!-- FLOWERS FOR YOU SECTION -->
+<div class="bouquet">
+
+<!-- curved text -->
+<svg viewBox="0 0 300 120" class="curve-text">
+  <path id="curve" d="M 40 90 Q 150 10 260 90" fill="transparent"/>
+  <text>
+    <textPath href="#curve" startOffset="50%" text-anchor="middle">
+      flowers for you
+    </textPath>
+  </text>
+</svg>
+
+<!-- bouquet image -->
+<img src="images/bouquet-main.png" alt="bouquet">
+
+</div>
+
+</div>
+
+<script src="playlist.js"></script>
+
+<!-- BACK BUTTON CONTROL -->
+<script>
+/*
+prevents browser back going to previous sections
+instead goes back to main page
+*/
+history.pushState(null, null, location.href);
+
+window.onpopstate = function () {
+  location.replace("index.html"); // palitan if iba name ng main page mo
+};
+</script>
+
+</body>
+</html>
+
+
+
+
