@@ -5,11 +5,11 @@
    =============================== */
 
 const playlist = [
-  "bg_songs/Torpe.mp3",
-  "bg_songs/Lowkey.mp3",
-  "bg_songs/palayoSaM.mp3",
-  "bg_songs/Mahika.mp3",
-  "bg_songs/fallInLOveaAg.mp3"
+  "Torpe.mp3",
+  "Lowkey.mp3",
+  "palayoSaM.mp3",
+  "Mahika.mp3",
+  "fallInLOveaAg.mp3"
 ];
 
 let audio = new Audio();
@@ -50,3 +50,4 @@ audio.addEventListener("ended",()=>{
 if(localStorage.getItem("playlistActive")==="true"){
   playPlaylist();
 }
+
